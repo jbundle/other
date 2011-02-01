@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Don Corley">
+	<META NAME="CREATED" CONTENT="20010114;193584">
+	<META NAME="CHANGEDBY" CONTENT="Don Corley">
+	<META NAME="CHANGED" CONTENT="20010310;3020500">
+</HEAD>
+<BODY>
+<H2>JTerminal - Technical Notes</H2>
+<P>JTerminal is a Java2 Application. The key design goals for
+JTerminal were:</P>
+<UL>
+	<LI><P>Design Simplicity. Although JTerminal has gotten rather
+	large, it is based on the industry-standard MVC
+	(model-view-controller) architecture with simple base classes.</P>
+	<LI><P>Deployment flexibility. JTerminal is based on a modular
+	design which breaks it into small manageable pieces.</P>
+</UL>
+<P>At first, it may seen a bit overwelming browsing through the
+classes, but none of this code is that difficult.</P>
+<H3>Design:</H3>
+<P>There are two main packages and six sub-packages:<BR><B>properties</B>
+- These are the main classes for loading and changing configuration
+parameters for the JTerminal components. The screen that is used to
+change parameters is called a PropertyView, the component that the
+parameters apply to is called a PropertyOwner. If anyone knows of a
+public framework to do this, tell me.<BR><B>terminal </B>- This is
+the main package for JTerminal. It contains the intefaces for Models,
+Views, and Controllers. It also contains the main applet/application
+class and global constants.<BR>Note: The terminal.control/model/view
+classes are all derived from a RemoteXXX class. The allows them all
+to be RMI Servers so they can deliver their payload to a remote
+process (A remote applet/application connects to a remote control, a
+servlet connects to the remote view)<BR><B>terminal.control.*</B> -
+These are the control(ler) classes.<BR><B>terminal.model.*</B> -
+These are the model classes. Duh: A 24 x 80 Matrix containing
+characters and state.<BR><B>terminal.view.*</B> - These are the view
+classes.<BR><B>terminal.rc</B> - These are some very simple classes
+that are the start of a remote control package.<BR><B>terminal.server</B>
+These classes comprise the remote (RMI) server.<BR><B>terminal.servlet</B>
+- These are the servlet classes, which connect to the view of a remote
+server then converts the view to html (pretty simple)</P>
+<H3>Deploying (running) JTerminal:</H3>
+<P>The easiest way to install JTerminal on your system is to use the
+Java WebStart install on the main screen. This allows you to run
+JTerminal as a local terminal emulator.<BR>If you want to run
+JTerminal the old way, or you want to set it up to be accessed
+remotely, here is how you install it:<BR>1. Download <a href="classes/terminal.jar">terminal.jar</a><BR>2.
+run JTerminal by typing (you must have the javasoft comm packages
+installed and the comm.jar in your classpath)<BR>    java -jar
+terminal.jar<BR>3. If you want to run JTerminal as a RMI server (for
+HTML for Remote access) you need to have an RMI registry running.
+Sorry this part of the instructions aren't terriblly clear, but
+running an RMI server is covered in detail at the javasoft site.</P>
+<P STYLE="margin-left: 0.79in">a. You should set up JINI on your
+machine. If not, just type rmiregistry in your Java2 bin
+directory.<BR>
+b. Start JTerminal so it can function as an RMI server
+(you need a policy file and a web server for this):<BR>    java
+-Djava.rmi.server.codebase=http://www.yourserver.com/terminal/classes/terminal.jar
+-Djava.security.policy=./etc/policy -jar terminal.jar<BR>c. Then, go
+to file -&gt; settings and change the Control, View, and Models to be
+RMI Servers (by checking RMI Server).<BR>d. Now, you are ready to run
+your client:<BR>For the Servlet client, the RMI server is
+automatically assumed to be on codebase's server.<BR>For a JTerminal
+client, just Change the control to an RMI control and enter the
+server name in the property window.</P>
+<OL START=4>
+	<P>4. To supply a different property file name, pass
+	properties=filename.properties to an application or applet.</P>
+</OL>
+<H3>To do (When I get some free time):</H3>
+<OL>
+	<LI><P>More emulations (VT-100, ANSI, etc).</P>
+	<LI><P>Better documentation.</P>
+	<P>Help, Help, Help! If you are a programmer help me make JTerminal
+	better. Although this documentation is spotty, Jterminal's design is
+	really very simple and can be easily enhanced. Email me if you want
+	to help me improve this program.</P>
+</OL>
+<P>JTerminal is open source. You can look at the source, copy it,
+sell it. You just can't remove the copyright notice or count on me to
+support it.</P>
+<P>Here is the zip of this distribution (including the source code):
+<a href="../src/terminal.zip">terminal.zip</a> (you may have to right-click and select download file)
+If you want to put jterminal on another web-server just unzip this
+and place the files in your (tomcat compatible) directory.</P>
+<P>All of the source code is also here on-line. To browse my source
+directory, <A HREF="../src/">click here</A>.</P>
+Oh yeah, There is no warranty with this software and don't try to run a nuclear
+power plant with this software.
+</BODY>
+</HTML>

@@ -1,0 +1,105 @@
+<project name="Terminal" default="dist" basedir=".">
+	<property file="build.properties">
+	</property>
+	<property file="mybuild.properties">
+	</property>
+	<target name="clean">
+		<delete dir="${build}">
+		</delete>
+		<delete dir="${lib}">
+		</delete>
+	</target>
+	<target name="prepare">
+		<tstamp>
+		</tstamp>
+		<mkdir dir="${build}">
+		</mkdir>
+		<mkdir dir="${temp}">
+		</mkdir>
+		<mkdir dir="${dist}">
+		</mkdir>
+		<mkdir dir="${classes}">
+		</mkdir>
+		<mkdir dir="${lib}">
+		</mkdir>
+		<mkdir dir="${docs}">
+		</mkdir>
+	</target>
+	<!-- set global properties for this build -->
+	<target depends="prepare" name="compile">
+		<javac debug="true" destdir="${classes}" srcdir="${src}">
+			<classpath>
+				<pathelement path="${project.class.path}">
+				</pathelement>
+			</classpath>
+		</javac>
+		<rmic classname="com.tourstudio.terminal.control.rmi.RmiControl" base="${classes}">
+			<classpath>
+				<pathelement path="${project.class.path}">
+				</pathelement>
+			</classpath>
+		</rmic>
+		<rmic classname="com.tourstudio.terminal.control.rmi.RmiOutImpl" base="${classes}">
+			<classpath>
+				<pathelement path="${project.class.path}">
+				</pathelement>
+			</classpath>
+		</rmic>
+		<rmic classname="com.tourstudio.terminal.server.RemoteServer" base="${classes}">
+			<classpath>
+				<pathelement path="${project.class.path}">
+				</pathelement>
+			</classpath>
+		</rmic>
+	</target>
+	<target name="dist" depends="compile">
+		<!-- Create the ${dist}/lib directory -->
+		<mkdir dir="${web}" />
+		<!-- Copy the source files to the web distribution -->
+		<copy todir="${web}">
+			<fileset dir="${basedir}">
+				<exclude name="${build}" />
+			</fileset>
+		</copy>
+		<copy todir="${web}">
+			<fileset dir="${basedir}/docs">
+				<include name="index.html" />
+			</fileset>
+		</copy>
+		<!-- Copy the image files to the web distribution -->
+		<!-- copy todir="${web}/images">
+			<fileset dir="${tour}/web/images">
+				<include name="buttons/Mail.gif" />
+			</fileset>
+		</copy -->
+		<!-- Copy the class files to the web distribution -->
+		<copy todir="${webclasses}">
+			<fileset dir="${classes}" />
+		</copy>
+		<!-- Put everything in ${build} into the bio.jar file -->
+		<jar jarfile="${build}/${project}.jar" manifest="${bin}/Manifest.txt">
+			<fileset dir="${webclasses}" />
+		</jar>
+		<copy file="${build}/${project}.jar" todir="${webclasses}" />
+		<copy file="${build}/${project}.jar" todir="${lib}" />
+		<zip zipfile="${build}/${project}.zip">
+			<fileset dir="${build}" />
+		</zip>
+		<copy file="${build}/${project}.zip" todir="${dist}" />
+		<copy file="${build}/${project}.zip" todir="${web}/src" />
+		<!-- This is just a placeholder use your actual password to sign the jar
+		<SignJar jar="${webclasses}/${project}.jar"
+			keystore="/home/don/.keystore"
+			alias="tourstudio"
+			storepass="mypass"
+			keypass="mypass" />
+		-->
+	</target>
+	<target name="doc" depends="prepare">
+		<!-- Create the Javadoc documentation-->
+		<javadoc packagenames="com.tourstudio.terminal.*" sourcepath="${src}" destdir="${docs}" author="true" version="true" use="true" windowtitle="Terminal API" doctitle="&lt;h1&gt;Terminal&lt;/h1&gt;" bottom="&lt;i&gt;Copyright &#169; 2001 Superior Software. All Rights Reserved.&lt;/i&gt;">
+			<classpath refid="project.class.path" />
+			<link href="http://developer.java.sun.com/developer/products/xml/docs/api/" />
+		</javadoc>
+	</target>
+</project>

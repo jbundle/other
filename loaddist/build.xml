@@ -1,0 +1,91 @@
+<project name="Tour" default="compile" basedir=".">
+	<!-- set global properties for this build -->
+	<property name="src" value="src" />
+	<property name="temp" value="temp" />
+	<property name="build" value="${temp}/build" />
+	<property name="classes" value="classes" />
+	<property name="dist"  value="${temp}/dist" /> 
+	<property name="docs"  value="docs/programmer/api" /> 
+	<property name="bin"  value="bin" /> 
+	<property name="localweb" value="loaddist" />
+	<property name="web"  value="${dist}/${localweb}" />
+    <property name="allincludes" value="com/tourstudio/**" />
+
+	<property name="java_dir" value="/usr/local/java" /> 
+	<property name="JAVA_HOME" value="/usr/local/java/jdk/jdk1.3" />
+	<property name="J2EE_HOME" value="/usr/local/java/jdk/j2sdkee1.3" />
+	<path id="project.class.path">
+	</path>
+
+	<target name="prepare">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${temp}" />
+		<mkdir dir="${build}" />
+		<mkdir dir="${classes}" />
+		<mkdir dir="${docs}" />
+	</target> 
+
+	<target name="compile" depends="prepare">
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac
+                        debug="true"
+			srcdir="${src}"
+			destdir="${classes}"
+			includes="${allincludes}">
+			<classpath refid="project.class.path" />
+		</javac>
+		<rmic
+			base="${classes}"
+			includes="com/tourstudio/samplermi/SampleRMIServer.class"/>
+		<rmic
+			base="${classes}"
+			includes="com/tourstudio/forward/ForwardRMIServer.class"/>
+	</target>
+        
+	<target name="dist" depends="compile">
+		<!-- Create the ${dist}/lib directory -->
+		<mkdir dir="${web}" />
+		<!-- Copy the source files to the web distribution -->
+		<copy todir="${web}">
+			<fileset dir="${basedir}">
+				<exclude name="${temp}" />
+			</fileset>
+		</copy>
+		<copy todir="${web}">
+			<fileset dir="${basedir}/docs">
+				<include name="index.html" />
+			</fileset>
+		</copy> 
+		<!-- Copy the class files to the web distribution -->
+		<copy todir="${web}/classes">
+			<fileset dir="${classes}" />
+		</copy> 
+		<!-- Put the source (and entire distribution) into the bio.zip file -->
+                <zip zipfile="${build}/loaddist.zip">
+ 			<fileset dir="${dist}" />
+                </zip>
+		<copy file="${build}/loaddist.zip" todir="${dist}"/>
+	</target>
+	<target name="clean">
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${temp}" />
+		<delete dir="${classes}/com" />	<!-- Temp - Delete the com directory -()Since classes has a copy of images -->
+	</target>
+	<target name="doc" depends="prepare">
+		<!-- Create the Javadoc documentation-->
+ 		<javadoc packagenames="com.tourstudio.*"
+        	   sourcepath="${src}"
+        	   destdir="${docs}"
+        	   author="true"
+        	   version="true"
+        	   use="true"
+        	   windowtitle="LoadDist API"
+        	   doctitle="&lt;h1&gt;Tourbean&lt;/h1&gt;"
+        	   bottom="&lt;i&gt;Copyright &#169; 2001 Superior Software. All Rights Reserved.&lt;/i&gt;">
+			<classpath refid="project.class.path" />
+			<link href="http://developer.java.sun.com/developer/products/xml/docs/api/"/>
+		</javadoc>
+	</target>
+</project> 

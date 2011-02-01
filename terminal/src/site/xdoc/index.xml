@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<document>
+  <properties>
+    <title>Welcome</title>
+    <author email="don@tourgeek.com">Don Corley</author>
+  </properties>
+  <body>
+    <section name="Welcome the JBundle Project!">
+      <p>
+        Take a good look at this web page. I know, I'm no Michelangelo.
+      </p>
+      <p>
+        It looks kind of like a regular web page, right. Except there are those areas that keep changing.
+      </p>
+      <p>
+        Try it for yourself. Move some of the calendar items around. Bring up another web page, start 
+        a stand-alone application or better
+        yet have your friend in Outer Mongolia bring up the same page. Have her make a change. Hey, you can
+        see her change.
+      </p>
+      <p>
+        More interesting is what you didn't see. You are behind that restrictive corporate firewall. Your
+        computer's security profile is so prohibitive that you can't read your personal e-mail. Have you
+        seen that scary message asking you to grant access to your machine... not here!
+      </p>
+      <p>
+        JBundle is an open-source framework for writing applications for the Internet.
+      </p>
+    </section>
+  </body>
+</document>
+

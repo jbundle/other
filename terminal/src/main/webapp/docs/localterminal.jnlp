@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JNLP File for Terminal Application -->
+<jnlp spec="1.0+" codebase="http://www.tourstudio.com/terminal">
+  <information>
+    <title>Terminal Application</title>
+    <vendor>tourstudio.com</vendor>
+    <homepage href="index.html"/>
+    <description kind="one-line">Terminal Application</description>
+    <description kind="short">
+Terminal is a basic terminal emulator written in Java.
+    </description>
+    <icon href="images/buttons/Terminal24.gif"/>
+    <offline-allowed/>
+	<keywords>terminal emulator,data general, D210, D216, dg, java</keywords>
+  </information>
+  <security>
+  </security>
+  <resources>
+    <j2se version="1.3+"/>
+    <jar href="classes/terminal.jar"/>
+  </resources>
+  <application-desc main-class="com.tourstudio.terminal.Main">
+    <argument>properties=http://www.tourstudio.com/terminal/etc/LoopbackTerminal.properties</argument>
+  </application-desc>
+</jnlp>

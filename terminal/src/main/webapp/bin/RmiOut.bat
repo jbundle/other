@@ -1,0 +1,1 @@
+java -Djava.rmi.server.codebase=file:/data/java/other/terminal/ -Djava.security.policy=policy com.tourstudio.terminal.control.rmi.RmiOutImpl

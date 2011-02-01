@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+  <display-name>Look Servlet</display-name>
+  <description>Look Servlet</description>
+
+ <servlet>
+  <servlet-name>com.tourstudio.weblook.LookServlet</servlet-name>
+  <servlet-class>com.tourstudio.weblook.LookServlet</servlet-class>
+ </servlet>
+
+ <servlet-mapping>
+    <servlet-name>com.tourstudio.weblook.LookServlet</servlet-name>
+    <url-pattern>/LookServlet</url-pattern>
+ </servlet-mapping>
+
+</web-app>

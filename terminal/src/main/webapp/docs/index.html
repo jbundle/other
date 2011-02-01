@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Terminal</TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="CREATED" CONTENT="20010309;5502400">
+	<META NAME="CHANGEDBY" CONTENT="Don Corley">
+	<META NAME="CHANGED" CONTENT="20010309;16162900">
+	<META NAME="DESCRIPTION" CONTENT="JTerminal is a basic terminal emulator.">
+	<META NAME="KEYWORDS" CONTENT="Terminal, Terminal Emulator, Java, Applet, Java Web Start, Java Application, JavaBean">
+
+<SCRIPT LANGUAGE="Javascript"> var javawsInstalled = 0; 
+  isIE = "false"; 
+ 
+  if (navigator.mimeTypes && navigator.mimeTypes.length) 
+  {  
+    x = navigator.mimeTypes['application/x-java-jnlp-file'];  
+//    if (x) // Bug in navigator plug-ins
+      javawsInstalled = 1;  
+  } 
+  else 
+  {  
+    isIE = "true";  
+  }  
+ 
+  function insertLink(url, name) 
+  {  
+    if (javawsInstalled) 
+    {  
+       document.write("<a href=" + url + ">"  + name + "</a>");  
+    } 
+    else 
+    {  
+      document.write("<a href=http://java.sun.com/cgi-bin/javawebstart-platform.sh?>Install Java Web Start <b>now!</b></a>");  
+    }  
+  }  
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+  on error resume next	
+    If isIE = "true" Then  
+      If Not(IsObject(CreateObject("JavaWebStart.IsInstalled"))) Then  
+	javawsInstalled = 0  
+      Else  
+	javawsInstalled = 1  
+      End If  
+    End If  
+</SCRIPT>
+
+</HEAD>
+<BODY>
+<H2 ALIGN=CENTER>JTerminal</H2>
+<P><b>JTerminal is a Terminal Emulator written in Java.</b></P>
+<P>Although it is still a little rough around the edges, it is based
+on a very solid design that makes JTerminal very flexible.</P>
+<P>Here is what it can do <B>now</B>:<BR>
+<B>Emulations:
+<BR>&middot;</B>Data General &reg; D210 (Hey this is the only one <B>I</B> need)<BR>
+<B>&middot; </B>If you point me to an
+easy-to-read reference for a VT-100 or ANSI terminal, I can throw one
+together pretty fast (or better yet, write the code and send it to me
+- it's simple... really)<BR>
+<B>Communications:<BR>
+&middot; </B>Serial
+(using your com port) (You need the <A HREF="http://www.javasoft.com/products/javacomm/index.html">comm
+package</A> from javasoft - it's free)<BR>
+<B>&middot; </B>RMI (over
+the internet/intranet)<BR>
+<B>Deployment:<BR>
+&middot; </B>Application<BR>
+<B>&middot; </B>Servlet<BR>
+<B>&middot; </B>Applet<BR><B>&middot; </B>Webstart Application<BR>
+<B>&middot; </B>Remote Control Application</P>
+<P>I use it as:<BR>
+A DG Terminal Emulator on my local computer.<BR>A
+HTML Terminal Emulator (so I can access my miniconputer) when I'm off-site.<BR>
+A remote-control terminal to automatically reboot my computer if my connection to the Internet is lost.</P>
+<P>Blah, Blah, Blah, enough talk. Try it for yourself: <BR>
+I Recommend running the the RMI JTerminal and then the Servlet JTerminal at
+the same time to see how they run from the same server - My server
+will just send the keys typed back to you. You didn't think I would
+give you access to my DG, did you!</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=20%>
+				<P>
+				<SCRIPT LANGUAGE="Javascript">
+				 <!--	
+				  insertLink("docs/rmiterminal.jnlp", '<IMG SRC="images/buttons/Terminal24.gif" NAME="JTerminal" ALIGN=BOTTOM BORDER=1>RMI JTerminal');  
+				 // -->
+				</SCRIPT>
+				<BR>Java WebStart<BR>This terminal connects to my
+				dummy server and echos characters back.<BR>(If you are behind a
+				firewall forget this one)</P>
+			</TD>
+			<TD WIDTH=20%>
+				<P>
+				<A HREF="servlet/com.tourstudio.terminal.Servlet"><IMG SRC="images/buttons/Terminal24.gif" NAME="JTerminal" ALIGN=BOTTOM BORDER=1>Servlet JTerminal</A>
+				<BR>This is the HTML version of JTerminal
+				which connects to my dummy server.</P>
+			</TD>
+			<TD WIDTH=20%>
+				<P>
+				<SCRIPT LANGUAGE="Javascript">
+				 <!--	
+				  insertLink("docs/localterminal.jnlp", '<IMG SRC="images/buttons/Terminal24.gif" NAME="JTerminal" ALIGN=BOTTOM BORDER=1>Local Loopback JTerminal');
+				 // -->
+				</SCRIPT>
+				<BR>Java WebStart<BR>This version just
+				loops characters back locally.<BR>Not very interesting, but you
+				can see how JTerminal looks if your are behind a filewall.</P>
+			</TD>
+			<TD WIDTH=20%>
+				<P>
+				<A HREF="docs/terminalapplet.html"><IMG SRC="images/buttons/Terminal24.gif" NAME="JTerminal" ALIGN=BOTTOM BORDER=1>Applet JTerminal via RMI</A>
+				<BR>This version of JTerminal runs as an Applet.
+				<BR>You need Netscape 6 (with the java-install option)
+				or the Java plug-in.<BR>(Doesn't work through a firewall)</P>
+			</TD>
+			<TD WIDTH=20%>
+				<P>
+				<SCRIPT LANGUAGE="Javascript">
+				 <!--	
+				  insertLink("docs/terminal.jnlp", '<IMG SRC="images/buttons/Terminal24.gif" NAME="JTerminal" ALIGN=BOTTOM BORDER=1>JTerminal');
+				 // -->
+				</SCRIPT>
+				<BR>This installs the full-blown application on your computer. You will be
+				asked to grant access to your system. JTerminal requires the
+				JavaSoft comm package installed and it will create a
+				Terminal.properties file in a directory called &quot;etc&quot;.</a>.</P>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P><BR><BR>
+</P>
+<P>If you don't have Java web-start, <A HREF="http://www.javasoft.com/products/javawebstart">download</A>
+it now for free!<BR>If you are an old-fashoned kind of Java person,
+<a href="classes/terminal.jar">download the jar file</a> (right-click and save-as) and then type &quot;java -jar terminal.jar&quot;
+from your hard drive (again, you will need the JavaSoft comm package
+installed and I will create the etc/Terminal.properties file on your
+hard drive).</P>
+<P>You can contact me at: 
+<A HREF="mailto:don@donandann.com"><IMG SRC="images/buttons/Mail.gif" NAME="Graphic1" ALIGN=BOTTOM BORDER=1></A><A HREF="mailto:don@donandann.com">
+don@donandann.com</A>.</P>
+<P>JTerminal is open-source under the GPL licence. You can use it,
+look at it and, change it, sell it. If you change it, you I ask that
+you release your code as open-source. Send it to me, and I'll add the code to my package and give you credit.
+If you have problems, I will be
+glad to try to help, although my free time is limited and I can't
+guarantee a fix. If you are interested in how terminal works or you
+want to see the source code, here is the <A HREF="docs/techinfo.html">techical
+information</A>. 
+</P>
+<P><FONT SIZE=2>Terminal is written for the Java2 platform. Java2 run
+on Windows 2000, Window Me, Windows NT, Windows 98, Windows 95,
+Macintosh (OSX), Linux, Solaris, Unix (several), AIX, AOS/VS(ha!) and many other
+systems.</FONT> 
+</P>
+</BODY>
+</HTML>
