@@ -54,7 +54,7 @@ public class Utility extends Object
 	 * @param strClassName Class name
 	 * @return The object (null if not found)
 	 */
-	public static Object makeObjectFromClassName(String strClassName)
+	public static Object makeObjectFromClassName(String interfaceName, String strClassName)
 	{
 		Object panel = null;
 		try	{
@@ -80,7 +80,7 @@ public class Utility extends Object
 	public static BaseModel createModelFromProperties(BaseView screenView, Properties properties)
 	{
 		String strClassName = Utility.setupClassName(properties.getProperty(MainPropertyView.MODEL_PARAM), "Model");
-		BaseModel screenModel = (BaseModel)Utility.makeObjectFromClassName(strClassName);
+		BaseModel screenModel = (BaseModel)Utility.makeObjectFromClassName(Object.class.getName(), strClassName);
 		if (screenModel != null)
 			screenModel.init(screenView, properties);
 		if (screenModel == null)	// Default
@@ -96,7 +96,7 @@ public class Utility extends Object
 	public static BaseControl createControlFromProperties(BaseModel screenModel, Properties properties)
 	{
 		String strClassName = Utility.setupClassName(properties.getProperty(MainPropertyView.CONTROL_PARAM), "Control");
-		BaseControl screenControl = (BaseControl)Utility.makeObjectFromClassName(strClassName);
+		BaseControl screenControl = (BaseControl)Utility.makeObjectFromClassName(Object.class.getName(), strClassName);
 		if (screenControl != null)
 			screenControl.init(screenModel, properties);
 		if (screenControl == null)	// Default
@@ -112,7 +112,7 @@ public class Utility extends Object
     public static BaseView createViewFromProperties(BaseControl screenControl, Properties properties)
 	{
 		String strClassName = Utility.setupClassName(properties.getProperty(MainPropertyView.VIEW_PARAM), "View");
-		BaseView screenView = (BaseView)Utility.makeObjectFromClassName(strClassName);
+		BaseView screenView = (BaseView)Utility.makeObjectFromClassName(Object.class.getName(), strClassName);
 		if (screenView != null)
 			screenView.init(screenControl, properties);
 		if (screenView == null)	// Default
