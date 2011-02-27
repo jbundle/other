@@ -22,4 +22,7 @@
       <item name="Technical information" href="technical.html"/>      
     </menu>
   </body>
+  
+  <menu ref="reports"/>
+  
 </project>
