@@ -26,7 +26,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 
-import org.jbundle.jproperties.PropertyView;
+import org.jbundle.util.apprunner.PropertyView;
 /**
  * The main program/applet.
  */

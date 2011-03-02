@@ -18,7 +18,7 @@ import java.net.*;
 import java.rmi.RMISecurityManager;
 import java.rmi.server.UnicastRemoteObject;
 
-import org.jbundle.jproperties.*;
+import org.jbundle.util.apprunner.*;
 import org.jbundle.terminal.*;
 import org.jbundle.terminal.model.*;
 import org.jbundle.terminal.server.*;

@@ -17,8 +17,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import org.jbundle.jproperties.PropertyOwner;
-import org.jbundle.jproperties.PropertyView;
+import org.jbundle.util.apprunner.PropertyOwner;
+import org.jbundle.util.apprunner.PropertyView;
 /**
  * Main property view screen.
  * From this screen the user selects the model, view, and control.

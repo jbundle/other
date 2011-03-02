@@ -10,7 +10,7 @@ import java.awt.event.*;
 import java.net.*;
 import java.util.*;
 
-import org.jbundle.jproperties.*;
+import org.jbundle.util.apprunner.*;
 
 /**
  * BaseControl - Represents the computer ScreenControl.

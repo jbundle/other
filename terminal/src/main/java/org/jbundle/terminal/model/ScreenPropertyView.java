@@ -11,7 +11,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-import org.jbundle.jproperties.*;
+import org.jbundle.util.apprunner.*;
 import org.jbundle.terminal.*;
 /**
  * GUI element that holds the user changable elements for connection

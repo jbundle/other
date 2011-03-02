@@ -10,7 +10,7 @@ import java.awt.event.*;
 import java.net.*;
 import java.util.*;
 
-import org.jbundle.jproperties.*;
+import org.jbundle.util.apprunner.*;
 import org.jbundle.terminal.*;
 import org.jbundle.terminal.control.*;
 import org.jbundle.terminal.control.remote.*;

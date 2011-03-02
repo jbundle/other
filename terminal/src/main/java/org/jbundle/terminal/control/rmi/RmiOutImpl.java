@@ -12,7 +12,7 @@ import java.util.*;
 import java.net.*;
 import java.awt.event.*;
 
-import org.jbundle.jproperties.*;
+import org.jbundle.util.apprunner.*;
 import org.jbundle.terminal.*;
 import org.jbundle.terminal.control.serial.*;
 import org.jbundle.terminal.server.*;

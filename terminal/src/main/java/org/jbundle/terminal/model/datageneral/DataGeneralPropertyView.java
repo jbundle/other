@@ -11,7 +11,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-import org.jbundle.jproperties.*;
+import org.jbundle.util.apprunner.*;
 import org.jbundle.terminal.*;
 import org.jbundle.terminal.model.*;
 import org.jbundle.terminal.model.remote.*;
