@@ -21,6 +21,12 @@
     <jbundleScmPath>util/other</jbundleScmPath>
   </properties>
       
+  <scm>
+    <url>https://github.com/jbundle/jbundle-other</url>
+    <connection>scm:git:git://github.com/jbundle/jbundle-other.git</connection>
+    <developerConnection>scm:git:git@github.com:jbundle/jbundle-other.git</developerConnection>
+  </scm>
+
   <modules>
     <module>loaddist</module>
     <module>monitor</module>
