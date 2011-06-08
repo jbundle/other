@@ -6,12 +6,12 @@
   <parent>
     <groupId>org.jbundle.config</groupId>
     <artifactId>jbundle-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <relativePath>../../../jbundle-parent</relativePath>
   </parent>
 
   <groupId>org.jbundle.util.other</groupId>
-  <artifactId>jbundle-util-other-terminal</artifactId>
+  <artifactId>org.jbundle.util.other.terminal</artifactId>
   <version>0.7.7-SNAPSHOT</version>
 
   <name>jbundle-util-other-terminal - Terminal app</name>
@@ -21,7 +21,7 @@
     <dependency>
   	  <groupId>org.jbundle.util</groupId>
       <artifactId>org.jbundle.util.apprunner</artifactId>
-      <version>0.7.7-SNAPSHOT</version>
+      <version>${jbundle-utilVersion}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
