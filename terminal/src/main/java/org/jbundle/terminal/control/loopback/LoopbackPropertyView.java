@@ -1,5 +1,6 @@
-/* @(#)SerialPropertyModel.java	1.5 98/07/17 SMI
+/*
  *
+ * Copyright © 2011 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal.control.loopback;
 

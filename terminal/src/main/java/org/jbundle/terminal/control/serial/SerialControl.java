@@ -1,5 +1,6 @@
-/* @(#)SerialControl.java	1.6 98/07/17 SMI
+/*
  *
+ * Copyright © 2011 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal.control.serial;
 

@@ -1,5 +1,6 @@
-/* @(#)SerialControlException.java	1.3 98/06/04 SMI
+/*
  *
+ * Copyright © 2011 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal.control.serial;
 

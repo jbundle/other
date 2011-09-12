@@ -1,7 +1,7 @@
 /*
  * @(#)ScreenApplet.java	1.13 98/08/28
- * Copyright (c) 2000 jbundle.org. All Rights Reserved.
  * Created on April 19, 2000, 3:11 AM
+ * Copyright © 2011 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal;
 

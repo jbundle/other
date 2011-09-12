@@ -1,5 +1,5 @@
 /*
- * Copyright 2000 jbundle.org. All Rights Reserved,
+ * Copyright © 2011 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal;
 

@@ -2,8 +2,9 @@
  * Servlet.java
  *
  * Created on April 8, 2000, 4:03 AM
- */
  
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package com.tourstudio.weblook;
 
 /**

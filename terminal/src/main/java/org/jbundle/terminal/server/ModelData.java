@@ -2,8 +2,9 @@
  * ModelData.java
  *
  * Created on April 19, 2000, 5:05 AM
- */
  
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package org.jbundle.terminal.server;
 
 import java.io.*;

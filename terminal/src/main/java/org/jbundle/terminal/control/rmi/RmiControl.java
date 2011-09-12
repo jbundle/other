@@ -1,7 +1,7 @@
-/* @(#)RmiControl.java	1.6 98/07/17 SMI
+/*
  *
- * Copyright (c) 1998 Sun Microsystems, Inc. All Rights Reserved.
  *
+ * Copyright © 2011 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal.control.rmi;
 

@@ -2,8 +2,9 @@
  * TestLoad.java
  *
  * Created on May 19, 2003, 2:54 AM
- */
 
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package org.jbundle.util.other.loaddist.test;
 
 //import com.oreilly.servlet.HttpMessage;

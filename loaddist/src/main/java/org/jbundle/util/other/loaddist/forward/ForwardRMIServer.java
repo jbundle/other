@@ -1,5 +1,4 @@
 /*
- * Copyright (c) 1998 Sun Microsystems, Inc. All Rights Reserved.
  * 
  * SUN MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE
  * SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
@@ -8,9 +7,9 @@
  * SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
  * THIS SOFTWARE OR ITS DERIVATIVES.
  * 
- * CopyrightVersion 1.1, 1.2_beta
- */
 
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package org.jbundle.util.other.loaddist.forward;
 
 import java.rmi.*;

@@ -1,6 +1,6 @@
-/**
- * Copyright (c) 2000 jbundle.org. All Rights Reserved.
+/*
  *		Don_Corley@msn.com
+ * Copyright © 2011 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal;
 

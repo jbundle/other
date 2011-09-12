@@ -2,8 +2,9 @@
  * ArcUpdater.java
  *
  * Created on January 25, 2001, 11:47 PM
- */
  
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package com.tourstudio.monitor.awt;
 
 import java.rmi.*;

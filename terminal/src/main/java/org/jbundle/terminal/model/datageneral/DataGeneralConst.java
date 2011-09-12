@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2000 jbundle.org. All Rights Reserved.
  *		don@tourgeek.com
-*/
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package org.jbundle.terminal.model.datageneral;
 
 /**

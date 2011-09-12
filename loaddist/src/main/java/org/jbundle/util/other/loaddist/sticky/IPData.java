@@ -1,6 +1,7 @@
-/**  
+/*
  * This is the main proxy program.  
- */  
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package org.jbundle.util.other.loaddist.sticky;
 
 import java.net.*;  

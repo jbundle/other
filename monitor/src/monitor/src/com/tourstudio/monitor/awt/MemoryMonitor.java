@@ -1,3 +1,6 @@
+/*
+ * Copyright © 2011 jbundle.org. All rights reserved.
+ */
 package com.tourstudio.monitor.awt;
 /*
  * @(#)MemoryMonitor.java	1.27 99/11/05
