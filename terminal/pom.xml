@@ -33,7 +33,7 @@
       <artifactId>commapi</artifactId>
       <version>3.0.0</version>
       <scope>system</scope>
-      <systemPath>/usr/local/java/util/commapi/comm.jar</systemPath>
+      <systemPath>${commapiPath}</systemPath>
     </dependency>
   </dependencies>
 
