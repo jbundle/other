@@ -19,9 +19,9 @@
   
   <dependencies>
     <dependency>
-  	  <groupId>org.jbundle.util</groupId>
+      <groupId>org.jbundle.util</groupId>
       <artifactId>org.jbundle.util.apprunner</artifactId>
-      <version>${jbundle-utilVersion}</version>
+      <version>${jbundleUtilVersionRange}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
