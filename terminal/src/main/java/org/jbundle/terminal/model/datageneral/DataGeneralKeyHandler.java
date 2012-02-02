@@ -138,13 +138,13 @@ public class DataGeneralKeyHandler extends ScreenKeyHandler
 				case KeyEvent.VK_F10:
 				case KeyEvent.VK_F11:
 				case KeyEvent.VK_F12:
-					int iOffset = kFun0;
+					int iOffset = FUN_0;
 					if (event.isShiftDown())
-						iOffset = kFun1;
+						iOffset = FUN_1;
 					if (event.isControlDown())
-						iOffset = kFun2;
+						iOffset = FUN_2;
 					if ((event.isShiftDown()) && (event.isControlDown()))
-						iOffset = kFun3;
+						iOffset = FUN_3;
 					this.sendCharToControl(kFuncHdr);
 					this.sendCharToControl((char)(iOffset + event.getKeyCode() - KeyEvent.VK_F1));
 					break;

@@ -76,123 +76,123 @@ public class DataGeneralModel extends RemoteModel
 			return chChar;
 		switch (chChar)
 		{
-		case kNull:	// null - Ignore
+		case NULL:	// null - Ignore
 			chChar = 0;	// Ignore
 			break;
-		case kA1:	// Ctrl A
+		case A1:	// Ctrl A
 			chChar = 0;
 			break;
-		case kEndReverse:	// Ctrl B
+		case END_REVERSE:	// Ctrl B
 			this.changeAttribute(REVERSED, false);
 			chChar = 0;
 			break;
-		case kA3:	// Ctrl C
+		case A3:	// Ctrl C
 			chChar = 0;
 			break;
-		case kA4:	// Ctrl D
+		case A4:	// Ctrl D
 			chChar = 0;
 			break;
-		case kReadCurPos:	// Ctrl E
+		case READ_CUR_POS:	// Ctrl E
 			BaseControl screenControl = this.getScreenView().getScreenControl();
 			screenControl.sendCharToControl(kCurPosHdr);
 			screenControl.sendCharToControl((char)m_rcCurrent.x);	// Column
 			screenControl.sendCharToControl((char)m_rcCurrent.y);	// Row
 			chChar = 0;
 			break;
-		case kA6:		// Ctrl F
+		case A6:		// Ctrl F
 			chChar = 0;
 			break;
-		case kBell:		// Ctrl G - Ring the bell
+		case BELL:		// Ctrl G - Ring the bell
 			Toolkit.getDefaultToolkit().beep();
 			chChar = 0;
 			break;
-		case kHome:		// Ctrl H - Move home
+		case HOME:		// Ctrl H - Move home
 			this.moveCursor(0, 0, false);
 			chChar = 0;
 			break;
-		case kTab:		// Ctrl I
+		case TAB:		// Ctrl I
 			chChar = 0;	// Ignore
 			break;
-		case kNewLine:	//? Ctrl J - Move to start of next line
+		case NEW_LINE:	//? Ctrl J - Move to start of next line
 			this.moveCursor(0, m_rcCurrent.y + 1, true);
 			chChar = 0;
 			break;
-		case kEraseEol:	// Ctrl K
+		case ERASE_EOL:	// Ctrl K
 			this.clearToEol();
 			chChar = 0;
 			break;
-		case kClearScreen:	// Ctrl L - Clear screen
+		case CLEAR_SCREEN:	// Ctrl L - Clear screen
 			this.clearScreen();
 			chChar = 0;
 			break;
-		case kCReturn:	// Ctrl M
+		case C_RETURN:	// Ctrl M
 			this.moveCursor(0, m_rcCurrent.y, true);
 			chChar = 0;
 			break;
-		case kStartBlink:	// Ctrl N
+		case START_BLINK:	// Ctrl N
 			this.changeAttribute(BLINK, true);
 			chChar = 0;
 			break;
-		case kEndBlink:	// Ctrl O
+		case END_BLINK:	// Ctrl O
 			this.changeAttribute(BLINK, false);
 			chChar = 0;
 			break;
-		case kPosCursor:	// Ctrl P
+		case POS_CURSOR:	// Ctrl P
 			m_iMultipleChar++;	// First char of sequence
 			m_chMultipleChar = chChar;
 			chChar = 0;
 			break;
-		case kA17:	// Ctrl Q
+		case A17:	// Ctrl Q
 			chChar = 0;
 			break;
-		case kPageOff:	// Ctrl R
+		case PAGE_OFF:	// Ctrl R
 			m_bAutoScroll = true;
 			chChar = 0;
 			break;
-		case kPageOn:	// Ctrl S
+		case PAGE_ON:	// Ctrl S
 			m_bAutoScroll = false;
 			chChar = 0;
 			break;
-		case kStartUnderline:	// Ctrl T
+		case START_UNDERLINE:	// Ctrl T
 			this.changeAttribute(UNDERLINED, true);
 			chChar = 0;
 			break;
-		case kEndUnderline:	// Ctrl U
+		case END_UNDERLINE:	// Ctrl U
 			this.changeAttribute(UNDERLINED, false);
 			chChar = 0;
 			break;
-		case kStartReverse:	// Ctrl V
+		case START_REVERSE:	// Ctrl V
 			this.changeAttribute(REVERSED, true);
 			chChar = 0;
 			break;
-		case kUp:	// '\027':	// Ctrl W - Move up
+		case UP:	// '\027':	// Ctrl W - Move up
 			this.moveCursor(m_rcCurrent.x, m_rcCurrent.y - 1, false);
 			chChar = 0;
 			break;
-		case kRight:	// '\030':	// Ctrl X - Move right
+		case RIGHT:	// '\030':	// Ctrl X - Move right
 			this.moveCursor(m_rcCurrent.x + 1, m_rcCurrent.y, false);
 			chChar = 0;
 			break;
-		case kLeft:	// '\031':	// Ctrl Y - Move left
+		case LEFT:	// '\031':	// Ctrl Y - Move left
 			this.moveCursor(m_rcCurrent.x - 1, m_rcCurrent.y, false);
 			chChar = 0;
 			break;
-		case kDown:	// '\032':	// Ctrl Z - Move down
+		case DOWN:	// '\032':	// Ctrl Z - Move down
 			this.moveCursor(m_rcCurrent.x, m_rcCurrent.y + 1, false);
 			chChar = 0;
 			break;
-		case kA27:
+		case A27:
 			chChar = 0;
 			break;
-		case kDimOn:
+		case DIM_ON:
 			this.changeAttribute(DIM, true);
 			chChar = 0;
 			break;
-		case kDimOff:
+		case DIM_OFF:
 			this.changeAttribute(DIM, false);
 			chChar = 0;
 			break;
-		case kTermID1:
+		case TERM_ID1:
 			m_iMultipleChar++;	// First char of sequence
 			m_chMultipleChar = chChar;
 			chChar = 0;
@@ -212,7 +212,7 @@ public class DataGeneralModel extends RemoteModel
 	{
 		switch (m_chMultipleChar)
 		{
-			case kPosCursor:	// Ctrl P
+			case POS_CURSOR:	// Ctrl P
 				if (m_iMultipleChar == 1)
 				{
 					this.moveCursor(chChar, m_rcCurrent.y, false);
@@ -222,10 +222,10 @@ public class DataGeneralModel extends RemoteModel
 				// else if (m_iMultipleChar == 2)
 					this.moveCursor(m_rcCurrent.x, chChar, false);
 				break;		// Done, reset multiple
-			case kTermID1:
+			case TERM_ID1:
 				if (m_iMultipleChar == 1)
 				{	// Second character in sequence
-					if (chChar == kTermID2)
+					if (chChar == TERM_ID2)
 					{	// Asking for the terminal ID
 						BaseControl screenControl = this.getScreenView().getScreenControl();
 						screenControl.sendCharToControl(kTermIDHdr);
@@ -235,9 +235,9 @@ public class DataGeneralModel extends RemoteModel
 						screenControl.sendCharToControl('T');
 						screenControl.sendCharToControl('y');
 					}
-					else if (chChar == kReverseOn2)
+					else if (chChar == REVERSE_ON_2)
 						this.changeAttribute(REVERSED, true);
-					else if (chChar == kReverseOff2)
+					else if (chChar == REVERSE_OFF_2)
 						this.changeAttribute(REVERSED, false);
 				}
 				break;

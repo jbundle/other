@@ -39,18 +39,18 @@ public class DemoModel extends DataGeneralModel
 {
 	private javax.swing.Timer m_timer = null;						// Timer for the blinking cursor.
 	public static final String m_strCannedMessage =
-		"" + kClearScreen +
-		"         Welcome to the JTerminal Demo" + kCReturn + kNewLine +
-		"         The characters that you are typing "  + kCReturn + kNewLine +
-		"         are being echoed from my server in L.A." + kCReturn + kNewLine +
-		"     " + kStartBlink + "A Data General D210 Terminal could do cool things like:" + kEndBlink + kCReturn + kNewLine +
-		"     " + kPosCursor + kA17 + kA6 + "Position the cursor on the screen" + kCReturn + kNewLine +
-		"     " + kStartUnderline + "Underline stuff" + kEndUnderline + kCReturn + kNewLine +
-		"     " + kStartReverse + "Reverse video" + kEndReverse + kCReturn + kNewLine +
-		"     " + kDimOn + "Dim characters" + kDimOff + kCReturn + kNewLine +
-		"     " + kStartBlink + "And "+ kStartReverse + "mix" + kDimOn + " everything" + kEndReverse + " up" + kEndBlink + kDimOff + kCReturn + kNewLine +
-		"For you non dgers, ^L (ctrl-L) clears the screen, Underline: ^t/^u" + kCReturn + kNewLine +
-		"Have fun, your artwork will be reset after a minute of inactivity!" + kCReturn + kNewLine;
+		"" + CLEAR_SCREEN +
+		"         Welcome to the JTerminal Demo" + C_RETURN + NEW_LINE +
+		"         The characters that you are typing "  + C_RETURN + NEW_LINE +
+		"         are being echoed from my server in L.A." + C_RETURN + NEW_LINE +
+		"     " + START_BLINK + "A Data General D210 Terminal could do cool things like:" + END_BLINK + C_RETURN + NEW_LINE +
+		"     " + POS_CURSOR + A17 + A6 + "Position the cursor on the screen" + C_RETURN + NEW_LINE +
+		"     " + START_UNDERLINE + "Underline stuff" + END_UNDERLINE + C_RETURN + NEW_LINE +
+		"     " + START_REVERSE + "Reverse video" + END_REVERSE + C_RETURN + NEW_LINE +
+		"     " + DIM_ON + "Dim characters" + DIM_OFF + C_RETURN + NEW_LINE +
+		"     " + START_BLINK + "And "+ START_REVERSE + "mix" + DIM_ON + " everything" + END_REVERSE + " up" + END_BLINK + DIM_OFF + C_RETURN + NEW_LINE +
+		"For you non dgers, ^L (ctrl-L) clears the screen, Underline: ^t/^u" + C_RETURN + NEW_LINE +
+		"Have fun, your artwork will be reset after a minute of inactivity!" + C_RETURN + NEW_LINE;
 	/**
 	 * Constructor.
 	 */
