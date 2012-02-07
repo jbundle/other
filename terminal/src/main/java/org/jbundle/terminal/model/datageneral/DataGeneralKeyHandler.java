@@ -60,14 +60,14 @@ public class DataGeneralKeyHandler extends ScreenKeyHandler
 		switch (chKey)
 		{
 			case '\b':
-				this.sendCharToControl(kDelete);
+				this.sendCharToControl(DELETE);
 				break;
 			case '\r':
 			case '\n':
 				if (!event.isShiftDown())
-					this.sendCharToControl(kNewLine);
+					this.sendCharToControl(NEW_LINE);
 				else
-					this.sendCharToControl(kCReturn);
+					this.sendCharToControl(C_RETURN);
 				break;
 			default:
 				this.sendCharToControl(chKey);	// Send this character to the control
@@ -90,41 +90,41 @@ public class DataGeneralKeyHandler extends ScreenKeyHandler
 			switch (event.getKeyCode())
 			{
 				case KeyEvent.VK_HOME:
-					this.sendCharToControl(kHome);
+					this.sendCharToControl(HOME);
 					break;
 				case KeyEvent.VK_LEFT:
-					this.sendCharToControl(kLeft);
+					this.sendCharToControl(LEFT);
 					break;
 				case KeyEvent.VK_RIGHT:
-					this.sendCharToControl(kRight);
+					this.sendCharToControl(RIGHT);
 					break;
 				case KeyEvent.VK_DOWN:
-					this.sendCharToControl(kDown);
+					this.sendCharToControl(DOWN);
 					break;
 				case KeyEvent.VK_UP:
-					this.sendCharToControl(kUp);
+					this.sendCharToControl(UP);
 					break;
 				case KeyEvent.VK_DELETE:
-					this.sendCharToControl(kDelete);
+					this.sendCharToControl(DELETE);
 					break;
 				case KeyEvent.VK_CLEAR:
-					this.sendCharToControl(kClearScreen);
+					this.sendCharToControl(CLEAR_SCREEN);
 					break;
 				case KeyEvent.VK_END:
-					this.sendCharToControl(kEndCur);
+					this.sendCharToControl(END_CUR);
 					break;
 				case KeyEvent.VK_INSERT:
-					this.sendCharToControl(kInsCur);
+					this.sendCharToControl(INS_CUR);
 					break;
 				case KeyEvent.VK_PAGE_UP:
-					if (kCHdr != 0)
-						this.sendCharToControl(kCHdr);
-					this.sendCharToControl(kC2Key);
+					if (C_HDR != 0)
+						this.sendCharToControl(C_HDR);
+					this.sendCharToControl(C2_KEY);
 					break;
 				case KeyEvent.VK_PAGE_DOWN:
-					if (kCHdr != 0)
-						this.sendCharToControl(kCHdr);
-					this.sendCharToControl(kC4Key);
+					if (C_HDR != 0)
+						this.sendCharToControl(C_HDR);
+					this.sendCharToControl(C4_KEY);
 					break;
 				case KeyEvent.VK_F1:
 				case KeyEvent.VK_F2:
@@ -145,7 +145,7 @@ public class DataGeneralKeyHandler extends ScreenKeyHandler
 						iOffset = FUN_2;
 					if ((event.isShiftDown()) && (event.isControlDown()))
 						iOffset = FUN_3;
-					this.sendCharToControl(kFuncHdr);
+					this.sendCharToControl(FUNC_HDR);
 					this.sendCharToControl((char)(iOffset + event.getKeyCode() - KeyEvent.VK_F1));
 					break;
 				case KeyEvent.VK_ESCAPE:	// Processed in keyChar()

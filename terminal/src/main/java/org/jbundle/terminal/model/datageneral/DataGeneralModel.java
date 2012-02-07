@@ -94,7 +94,7 @@ public class DataGeneralModel extends RemoteModel
 			break;
 		case READ_CUR_POS:	// Ctrl E
 			BaseControl screenControl = this.getScreenView().getScreenControl();
-			screenControl.sendCharToControl(kCurPosHdr);
+			screenControl.sendCharToControl(CUR_POS_HDR);
 			screenControl.sendCharToControl((char)m_rcCurrent.x);	// Column
 			screenControl.sendCharToControl((char)m_rcCurrent.y);	// Row
 			chChar = 0;
@@ -228,7 +228,7 @@ public class DataGeneralModel extends RemoteModel
 					if (chChar == TERM_ID2)
 					{	// Asking for the terminal ID
 						BaseControl screenControl = this.getScreenView().getScreenControl();
-						screenControl.sendCharToControl(kTermIDHdr);
+						screenControl.sendCharToControl(TERM_ID_HDR);
 						screenControl.sendCharToControl('o');
 						screenControl.sendCharToControl('#');
 						screenControl.sendCharToControl('1');

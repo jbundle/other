@@ -11,7 +11,7 @@ interface DataGeneralConst
 {
 	static final char CARRIAGE_RETURN = 13;
 	static final char LINE_FEED = 10;
-	static final char ERASE_EOL = 11;
+	//static final char ERASE_EOL = 11;
 	//static final char HOME = 8;
 	static final char HOME_ALSO = 30;
 	//static final char CLEAR_SCREEN = 12;
