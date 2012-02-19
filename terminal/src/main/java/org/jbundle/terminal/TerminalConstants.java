@@ -2,7 +2,7 @@
  * TerminalConstants.java
  * Created on April 19, 2000, 3:11 AM
  
- * Copyright © 2011 jbundle.org. All rights reserved.
+ * Copyright © 2012 jbundle.org. All rights reserved.
  */
 package org.jbundle.terminal;
 

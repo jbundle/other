@@ -3,7 +3,7 @@
  *
  * Created on March 22, 2003, 2:58 AM
 
- * Copyright © 2011 jbundle.org. All rights reserved.
+ * Copyright © 2012 jbundle.org. All rights reserved.
  */
 package org.jbundle.util.other.loaddist.sticky;
 

@@ -8,7 +8,7 @@
  * THIS SOFTWARE OR ITS DERIVATIVES.
  * 
 
- * Copyright © 2011 jbundle.org. All rights reserved.
+ * Copyright © 2012 jbundle.org. All rights reserved.
  */
 package org.jbundle.util.other.loaddist.forward;
 

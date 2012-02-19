@@ -3,7 +3,7 @@
  *
  * Created on May 19, 2003, 2:54 AM
 
- * Copyright © 2011 jbundle.org. All rights reserved.
+ * Copyright © 2012 jbundle.org. All rights reserved.
  */
 package org.jbundle.util.other.loaddist.test;
 

@@ -3,7 +3,7 @@
  *
  * Created on January 27, 2001, 2:34 AM
  
- * Copyright © 2011 jbundle.org. All rights reserved.
+ * Copyright © 2012 jbundle.org. All rights reserved.
  */
 package com.tourstudio.monitor;
 
