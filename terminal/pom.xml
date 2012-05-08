@@ -17,6 +17,10 @@
   <name>jbundle-util-other-terminal - Terminal app</name>
   <packaging>war</packaging>
   
+  <properties>
+    <projectName>jbundle-util-other-terminal</projectName>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.jbundle.util</groupId>
