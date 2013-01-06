@@ -37,6 +37,7 @@
       <artifactId>commapi</artifactId>
       <version>3.0.0</version>
       <scope>system</scope>
+      <optional>true</optional>
       <systemPath>${commapiPath}</systemPath>
     </dependency>
   </dependencies>
