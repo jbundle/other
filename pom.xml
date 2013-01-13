@@ -22,9 +22,9 @@
   </properties>
       
   <scm>
-    <url>https://github.com/jbundle/jbundle-other</url>
-    <connection>scm:git:git://github.com/jbundle/jbundle-other.git</connection>
-    <developerConnection>scm:git:git@github.com:jbundle/jbundle-other.git</developerConnection>
+    <url>https://github.com/jbundle/other</url>
+    <connection>scm:git:git://github.com/jbundle/other</connection>
+    <developerConnection>scm:git:git@github.com:jbundle/other</developerConnection>
   </scm>
 
   <modules>
