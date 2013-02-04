@@ -12,7 +12,7 @@
 
   <groupId>org.jbundle.util.other</groupId>
   <artifactId>jbundle-util-other-reactor</artifactId>
-  <version>0.7.7-SNAPSHOT</version>
+  <version>0.7.7</version>
 
   <name>jbundle-util-other-root - Other independent projects</name>
   <packaging>pom</packaging>
