@@ -83,7 +83,7 @@
         	   use="true"
         	   windowtitle="LoadDist API"
         	   doctitle="&lt;h1&gt;Tourbean&lt;/h1&gt;"
-        	   bottom="&lt;i&gt;Copyright &#169; 2001 Superior Software. All Rights Reserved.&lt;/i&gt;">
+        	   bottom="&lt;i&gt;Copyright &#169; 2013 tourgeek.com. All Rights Reserved.&lt;/i&gt;">
 			<classpath refid="project.class.path" />
 			<link href="http://developer.java.sun.com/developer/products/xml/docs/api/"/>
 		</javadoc>
