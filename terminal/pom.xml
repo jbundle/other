@@ -19,7 +19,7 @@
   
   <properties>
     <projectName>jbundle-util-other</projectName>
-    <commapiPath>/usr/local/java/util/javaxcomm/comm.jar</commapiPath>
+    <commapiPath>/usr/share/java/commapi/jar/comm.jar</commapiPath>
   </properties>
 
   <dependencies>
