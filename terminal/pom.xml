@@ -12,7 +12,7 @@
 
   <groupId>org.jbundle.util.other</groupId>
   <artifactId>org.jbundle.util.other.terminal</artifactId>
-  <version>0.7.9-SNAPSHOT</version>
+  <version>0.7.9</version>
 
   <name>jbundle-util-other-terminal - Terminal app</name>
   <packaging>war</packaging>
