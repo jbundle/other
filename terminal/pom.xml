@@ -12,7 +12,7 @@
 
   <groupId>org.jbundle.util.other</groupId>
   <artifactId>org.jbundle.util.other.terminal</artifactId>
-  <version>0.7.10</version>
+  <version>0.7.11-SNAPSHOT</version>
 
   <name>jbundle-util-other-terminal - Terminal app</name>
   <packaging>war</packaging>
@@ -42,9 +42,4 @@
       <systemPath>${commapiPath}</systemPath>
     </dependency>
   </dependencies>
-
-
-  <scm>
-    <tag>jbundle-util-other-reactor-0.7.10</tag>
-  </scm>
 </project>
