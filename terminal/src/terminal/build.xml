@@ -89,7 +89,7 @@
 		<copy file="${build}/${project}.zip" todir="${web}/src" />
 		<!-- This is just a placeholder use your actual password to sign the jar
 		<SignJar jar="${webclasses}/${project}.jar"
-			keystore="/home/don/.keystore"
+			keystore="/home/dcorley/.keystore"
 			alias="tourstudio"
 			storepass="mypass"
 			keypass="mypass" />
